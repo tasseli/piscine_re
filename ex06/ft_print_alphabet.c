@@ -6,11 +6,13 @@
 /*   By: mnenonen <mnenonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/14 20:56:12 by mnenonen          #+#    #+#             */
-/*   Updated: 2019/10/14 21:01:48 by mnenonen         ###   ########.fr       */
+/*   Updated: 2019/10/14 21:11:46 by mnenonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+void ft_putchar(char c);
 
 void ft_print_alphabet(void)
 {
@@ -19,7 +21,7 @@ void ft_print_alphabet(void)
 	current = 'a';
 	while (current != 'z' + 1)
 	{
-		write(1, &current, 1);
+		ft_putchar(current);
 		++current;
 	}
 }
