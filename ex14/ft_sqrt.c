@@ -6,8 +6,22 @@
 /*   By: mnenonen <mnenonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/16 19:25:02 by mnenonen          #+#    #+#             */
-/*   Updated: 2019/10/16 19:25:14 by mnenonen         ###   ########.fr       */
+/*   Updated: 2019/10/16 19:51:53 by mnenonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+int	ft_sqrt(int nb)
+{
+	int	i;
 
+	if (nb < 0)
+		return (0);
+	i = 0;
+	while (i * i <= nb)
+	{
+		if (i * i == nb)
+			return (i);
+		++i;
+	}
+	return (0);
+}
