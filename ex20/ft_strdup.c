@@ -6,12 +6,11 @@
 /*   By: mnenonen <mnenonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 18:48:25 by mnenonen          #+#    #+#             */
-/*   Updated: 2019/10/18 19:17:29 by mnenonen         ###   ########.fr       */
+/*   Updated: 2019/10/18 19:44:57 by mnenonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <sys/errno.h>
 
 int		ft_strlen(char *str)
 {
@@ -36,7 +35,6 @@ char	*ft_strdup(char *src)
 	newptr = malloc((len + 1) * sizeof(char));
 	if (!newptr)
 	{
-		errno = ENOMEM;
 		return (NULL);
 	}
 	i = 0;
