@@ -1,0 +1,24 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: mnenonen <mnenonen@student.hive.fi>        +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2019/10/21 19:23:47 by mnenonen          #+#    #+#              #
+#    Updated: 2019/10/21 19:50:23 by mnenonen         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+all:
+	gcc -c ./srcs/ft_putchar.c ./srcs/ft_putstr.c ./srcs/ft_strcmp.c \
+		./srcs/ft_strlen.c ./srcs/ft_swap.c
+	ar -rc libft.a ft_putchar.o ft_putstr.o ft_strcmp.o ft_strlen.o ft_swap.o
+
+clean:
+	rm ft_putchar.o ft_putstr.o ft_strcmp.o ft_strlen.o ft_swap.o
+
+fclean: clean
+	rm libft.a
+
+re: fclean all
