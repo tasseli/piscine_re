@@ -6,7 +6,7 @@
 /*   By: mnenonen <mnenonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 21:02:26 by mnenonen          #+#    #+#             */
-/*   Updated: 2019/10/23 21:51:06 by mnenonen         ###   ########.fr       */
+/*   Updated: 2019/10/23 21:53:05 by mnenonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,8 +58,6 @@ int		main(int argc, char **argv)
 	int		fd;
 	char	buf[BUF_SIZE];
 	int		i;
-	int		read_size;
-	char	*p_buf;
 
 	i = 0;
 	while (i++ < BUF_SIZE)
@@ -73,7 +71,6 @@ int		main(int argc, char **argv)
 		return (-3);
 	}
 	i = 0;
-	read_size = 0;
 	while ((read(fd, buf, BUF_SIZE)))
 	{
 		i = 0;
