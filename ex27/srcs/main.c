@@ -6,7 +6,7 @@
 /*   By: mnenonen <mnenonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 21:02:26 by mnenonen          #+#    #+#             */
-/*   Updated: 2019/10/23 21:53:05 by mnenonen         ###   ########.fr       */
+/*   Updated: 2019/10/23 22:53:15 by mnenonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,15 +70,11 @@ int		main(int argc, char **argv)
 		ft_puterror("Error opening the file for reading.\n");
 		return (-3);
 	}
-	i = 0;
 	while ((read(fd, buf, BUF_SIZE)))
 	{
 		i = 0;
 		while (i < BUF_SIZE)
-		{
-			ft_putchar(buf[i]);
-			++i;
-		}
+			ft_putchar(buf[i++]);
 	}
 	close(fd);
 	return (0);
