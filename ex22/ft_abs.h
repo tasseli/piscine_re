@@ -6,8 +6,11 @@
 /*   By: mnenonen <mnenonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 20:22:35 by mnenonen          #+#    #+#             */
-/*   Updated: 2019/10/18 20:28:38 by mnenonen         ###   ########.fr       */
+/*   Updated: 2019/10/23 22:47:10 by mnenonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#define ABS(Value) if(Value < 0) Value = -Value;
+#ifndef FT_ABS_H
+# define FT_ABS_H
+# define ABS(Value) if(Value < 0) Value = -Value;
+#endif
