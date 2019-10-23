@@ -6,7 +6,7 @@
 /*   By: mnenonen <mnenonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 20:35:52 by mnenonen          #+#    #+#             */
-/*   Updated: 2019/10/21 19:09:08 by mnenonen         ###   ########.fr       */
+/*   Updated: 2019/10/23 22:48:09 by mnenonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,4 +18,4 @@ typedef struct	s_point {
 	int	y;
 }				t_point;
 
-#endif FT_POINT_H
+#endif
