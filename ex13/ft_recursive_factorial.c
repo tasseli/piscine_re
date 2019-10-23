@@ -6,7 +6,7 @@
 /*   By: mnenonen <mnenonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/15 21:50:58 by mnenonen          #+#    #+#             */
-/*   Updated: 2019/10/23 22:34:19 by mnenonen         ###   ########.fr       */
+/*   Updated: 2019/10/24 00:02:48 by mnenonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_recursive_factorial(int nb)
 	{
 		ans = ft_recursive_factorial(nb - 1) * nb;
 		if (ans < 0)
-			return 0;
+			return (0);
 		return (ans);
 	}
 	else if (nb < 0)
