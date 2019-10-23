@@ -6,7 +6,7 @@
 /*   By: mnenonen <mnenonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/18 18:48:25 by mnenonen          #+#    #+#             */
-/*   Updated: 2019/10/18 19:44:57 by mnenonen         ###   ########.fr       */
+/*   Updated: 2019/10/23 22:40:52 by mnenonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ char	*ft_strdup(char *src)
 		newptr[i] = src[i];
 		++i;
 	}
+	newptr[len] = 0;
 	return (newptr);
 }
