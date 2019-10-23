@@ -6,14 +6,19 @@
 /*   By: mnenonen <mnenonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 21:02:26 by mnenonen          #+#    #+#             */
-/*   Updated: 2019/10/21 23:42:20 by mnenonen         ###   ########.fr       */
+/*   Updated: 2019/10/23 21:51:06 by mnenonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <fcntl.h>
 
-#define BUF_SIZE 2
+#define BUF_SIZE 1024
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 void	ft_putstr(char *str)
 {
@@ -53,6 +58,8 @@ int		main(int argc, char **argv)
 	int		fd;
 	char	buf[BUF_SIZE];
 	int		i;
+	int		read_size;
+	char	*p_buf;
 
 	i = 0;
 	while (i++ < BUF_SIZE)
@@ -66,11 +73,16 @@ int		main(int argc, char **argv)
 		return (-3);
 	}
 	i = 0;
-	while (read(fd, buf, BUF_SIZE) == BUF_SIZE)
-		if (buf[i] != 0)
-			ft_putstr(&buf[i]);
-		else
-			break;
+	read_size = 0;
+	while ((read(fd, buf, BUF_SIZE)))
+	{
+		i = 0;
+		while (i < BUF_SIZE)
+		{
+			ft_putchar(buf[i]);
+			++i;
+		}
+	}
 	close(fd);
 	return (0);
 }
