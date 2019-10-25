@@ -6,7 +6,7 @@
 #    By: mnenonen <mnenonen@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/10/21 19:23:47 by mnenonen          #+#    #+#              #
-#    Updated: 2019/10/21 19:50:23 by mnenonen         ###   ########.fr        #
+#    Updated: 2019/10/25 19:46:48 by mnenonen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,9 +16,9 @@ all:
 	ar -rc libft.a ft_putchar.o ft_putstr.o ft_strcmp.o ft_strlen.o ft_swap.o
 
 clean:
-	rm ft_putchar.o ft_putstr.o ft_strcmp.o ft_strlen.o ft_swap.o
+	rm -f ft_putchar.o ft_putstr.o ft_strcmp.o ft_strlen.o ft_swap.o
 
 fclean: clean
-	rm libft.a
+	rm -f libft.a
 
 re: fclean all
