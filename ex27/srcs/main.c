@@ -6,14 +6,14 @@
 /*   By: mnenonen <mnenonen@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/21 21:02:26 by mnenonen          #+#    #+#             */
-/*   Updated: 2019/10/23 22:53:15 by mnenonen         ###   ########.fr       */
+/*   Updated: 2019/10/25 22:23:53 by mnenonen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <fcntl.h>
 
-#define BUF_SIZE 1024
+#define BUF_SIZE 4
 
 void	ft_putchar(char c)
 {
@@ -57,6 +57,7 @@ int		main(int argc, char **argv)
 {
 	int		fd;
 	char	buf[BUF_SIZE];
+	int		chars;
 	int		i;
 
 	i = 0;
@@ -70,10 +71,10 @@ int		main(int argc, char **argv)
 		ft_puterror("Error opening the file for reading.\n");
 		return (-3);
 	}
-	while ((read(fd, buf, BUF_SIZE)))
+	while ((chars = read(fd, buf, BUF_SIZE)))
 	{
 		i = 0;
-		while (i < BUF_SIZE)
+		while (i < chars)
 			ft_putchar(buf[i++]);
 	}
 	close(fd);
